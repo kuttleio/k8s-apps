@@ -12,8 +12,8 @@ spec:
       - path: manifests/*/*
   template:
     metadata:
-    namespace: argocd
-      name: "{{path[2]}}-{{path.basename}}"
+      namespace: argocd
+      name: "{{path[1]}}-{{path.basename}}"
     spec:
       destination:
         server: https://kubernetes.default.svc
